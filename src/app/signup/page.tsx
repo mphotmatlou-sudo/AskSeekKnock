@@ -27,11 +27,11 @@ import {
 } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Chrome } from 'lucide-react';
+import { Chrome, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-
+import { Logo } from '@/components/logo';
 
 const formSchema = z.object({
     email: z.string().email({ message: 'Please enter a valid email.' }),
@@ -68,20 +68,30 @@ export default function SignupPage() {
             title: 'Sign Up Successful!',
             description: 'Welcome! You can now log in with your credentials.',
         });
-        // Here you would typically handle the API call for registration
     }
 
-
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background p-4">
-      <Card className="w-full max-w-lg">
-        <CardHeader className="text-center">
-          <CardTitle className="text-2xl">Create an account</CardTitle>
-          <CardDescription>
-            Enter your information to create a new account
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
+    <div className="flex min-h-screen flex-col items-center justify-center bg-background/50 p-4 relative py-12">
+      <div className="absolute top-8 left-8 hidden md:block">
+        <Logo />
+      </div>
+
+      <div className="w-full max-w-lg space-y-4">
+        <Link href="/landing">
+          <Button variant="ghost" size="sm" className="mb-2 group hover:bg-primary/5">
+            <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
+            Back to Home
+          </Button>
+        </Link>
+
+        <Card className="border-none shadow-blocksy-xl animate-scale-in">
+          <CardHeader className="text-center">
+            <CardTitle className="text-2xl font-bold text-blocksy-heading">Create an account</CardTitle>
+            <CardDescription>
+              Enter your information to create a new account
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                      <FormField
@@ -91,7 +101,7 @@ export default function SignupPage() {
                             <FormItem>
                                 <FormLabel>Email</FormLabel>
                                 <FormControl>
-                                    <Input type="email" placeholder="name@example.com" {...field} />
+                                    <Input type="email" placeholder="name@example.com" {...field} className="rounded-blocksy-md" />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -104,7 +114,7 @@ export default function SignupPage() {
                             <FormItem>
                                 <FormLabel>Password</FormLabel>
                                 <FormControl>
-                                    <Input type="password" placeholder="********" {...field} />
+                                    <Input type="password" placeholder="********" {...field} className="rounded-blocksy-md" />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -119,7 +129,7 @@ export default function SignupPage() {
                                     <FormLabel>Gender</FormLabel>
                                      <Select onValueChange={field.onChange} defaultValue={field.value}>
                                         <FormControl>
-                                            <SelectTrigger>
+                                            <SelectTrigger className="rounded-blocksy-md">
                                                 <SelectValue placeholder="Select gender" />
                                             </SelectTrigger>
                                         </FormControl>
@@ -140,7 +150,7 @@ export default function SignupPage() {
                                 <FormItem>
                                     <FormLabel>Age</FormLabel>
                                     <FormControl>
-                                        <Input type="number" placeholder="e.g., 25" {...field} />
+                                        <Input type="number" placeholder="e.g., 25" {...field} className="rounded-blocksy-md" />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -155,7 +165,7 @@ export default function SignupPage() {
                                 <FormItem>
                                     <FormLabel>Country</FormLabel>
                                     <FormControl>
-                                        <Input placeholder="e.g., United States" {...field} />
+                                        <Input placeholder="e.g., United States" {...field} className="rounded-blocksy-md" />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -168,7 +178,7 @@ export default function SignupPage() {
                                 <FormItem>
                                     <FormLabel>City</FormLabel>
                                     <FormControl>
-                                        <Input placeholder="e.g., New York" {...field} />
+                                        <Input placeholder="e.g., New York" {...field} className="rounded-blocksy-md" />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -182,7 +192,7 @@ export default function SignupPage() {
                             <FormItem>
                                 <FormLabel>Home Language</FormLabel>
                                 <FormControl>
-                                    <Input placeholder="e.g., English" {...field} />
+                                    <Input placeholder="e.g., English" {...field} className="rounded-blocksy-md" />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -195,7 +205,7 @@ export default function SignupPage() {
                             <FormItem>
                                 <FormLabel>Name of Church</FormLabel>
                                 <FormControl>
-                                    <Input placeholder="e.g., The Community Church" {...field} />
+                                    <Input placeholder="e.g., The Community Church" {...field} className="rounded-blocksy-md" />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -208,13 +218,13 @@ export default function SignupPage() {
                             <FormItem>
                                 <FormLabel>Denomination</FormLabel>
                                 <FormControl>
-                                    <Input placeholder="e.g., Non-denominational, Baptist" {...field} />
+                                    <Input placeholder="e.g., Non-denominational, Baptist" {...field} className="rounded-blocksy-md" />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
                         )}
                     />
-                    <Button type="submit" className="w-full">
+                    <Button type="submit" className="w-full rounded-blocksy-md shadow-blocksy font-bold">
                         Create Account
                     </Button>
                     <div className="relative">
@@ -227,7 +237,7 @@ export default function SignupPage() {
                             </span>
                         </div>
                     </div>
-                    <Button variant="outline" className="w-full">
+                    <Button variant="outline" className="w-full rounded-blocksy-md">
                         <Chrome className="mr-2 h-4 w-4" />
                         Sign up with Google
                     </Button>
@@ -235,12 +245,13 @@ export default function SignupPage() {
             </Form>
              <div className="mt-4 text-center text-sm">
                 Already have an account?{' '}
-                <Link href="/login" className="underline">
+                <Link href="/login" className="underline font-semibold text-primary hover:text-primary/80 transition-colors">
                     Login
                 </Link>
             </div>
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }

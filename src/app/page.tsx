@@ -152,6 +152,26 @@ export default function DashboardPage() {
               </Link>
             </CardContent>
           </Card>
+
+          <Card className="border-none shadow-blocksy animate-fade-in delay-500 overflow-hidden">
+             <div className="h-2 bg-emerald-500 w-full" />
+            <CardHeader className="pb-3">
+              <CardTitle className="text-lg flex items-center">
+                <BookMarked className="mr-2 h-4 w-4 text-emerald-500" />
+                Author's Insights
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground mb-4">
+                Explore biblical insights and wisdom from the author's upcoming book.
+              </p>
+              <Link href="/blog">
+                <Button variant="outline" size="sm" className="w-full border-emerald-500/20 hover:bg-emerald-500/5">
+                  Read Now
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </div>

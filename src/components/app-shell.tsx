@@ -57,7 +57,7 @@ const navItems = [
   { href: '/sermons', label: 'Sermons', icon: ClipboardEdit },
   { href: '/personal-templates', label: 'Personal Templates', icon: UserSquare },
   { href: '/community', label: 'Community', icon: Users },
-
+  { href: '/blog', label: "Author's Insights", icon: BookMarked },
   { href: '/subscription', label: 'Subscription', icon: Crown },
 ];
 
@@ -162,6 +162,13 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               </DropdownMenuSub>
               <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
+                    <Link href="/admin" className="opacity-50 hover:opacity-100 transition-opacity cursor-default">
+                        <Cog className="mr-2 h-4 w-4"/>
+                        Admin Portal
+                    </Link>
+                </DropdownMenuItem>
+              <DropdownMenuSeparator />
+                <DropdownMenuItem asChild>
                     <Link href="/login">
                         <LogIn className="mr-2 h-4 w-4"/>
                         Log In
@@ -172,15 +179,6 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </SidebarFooter>
       </Sidebar>
       <SidebarInset className="relative">
-        {/* Global Watermark */}
-        <div className="fixed inset-0 pointer-events-none flex items-center justify-center -z-10 opacity-[0.03] overflow-hidden">
-          <img 
-            src="/ASKlogo1.png" 
-            alt="" 
-            className="w-[800px] h-[800px] object-contain rotate-12"
-          />
-        </div>
-        
         <header className="flex items-center justify-between p-4 border-b md:hidden bg-background/80 backdrop-blur-sm sticky top-0 z-20">
           <Logo />
           <SidebarTrigger />

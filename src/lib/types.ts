@@ -59,3 +59,15 @@ export type Comment = {
   content: string;
   createdAt: number;
 };
+
+export type BlogEntry = {
+  id: string;
+  title: string;
+  content: string;
+  author: string;
+  date: string;
+  category: string;
+  slug: string;
+  image?: string;
+  excerpt?: string;
+};

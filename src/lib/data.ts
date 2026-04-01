@@ -1,4 +1,4 @@
-import type { JournalEntry, PrayerTemplate, SermonNote, ScheduledPrayer } from './types';
+import type { JournalEntry, PrayerTemplate, SermonNote, ScheduledPrayer, BlogEntry } from './types';
 import { Heart, Shield, Users, Sun, Moon, Star, HandHelping, UserSquare } from 'lucide-react';
 
 export const prayerTemplates: PrayerTemplate[] = [
@@ -229,5 +229,43 @@ export const scheduledPrayers: ScheduledPrayer[] = [
     timestamp: new Date(new Date().getTime() + 1 * 24 * 60 * 60 * 1000).getTime(), // 1 day from now
     participants: ['You'],
     type: 'morning devotion',
+  }
+];
+
+export const blogEntries: BlogEntry[] = [
+  {
+    id: '1',
+    title: 'The Power of Consistency in Prayer',
+    slug: 'power-of-consistency',
+    author: 'A.S.K. Author',
+    date: 'March 25, 2026',
+    category: 'Prayer Fundamentals',
+    excerpt: 'Consistency is the engine that drives spiritual growth. In this section, we explore why daily commitment is vital.',
+    content: `
+      <h2>The Engine of Spiritual Growth</h2>
+      <p>Consistency is more than just a habit; it's a spiritual discipline that opens doors to deeper communion with God. When we pray daily, we aren't just ticking a box; we are building a relationship.</p>
+      <h3>Why Daily Prayer?</h3>
+      <p>Imagine trying to grow a garden by watering it only once a month. The plants might survive, but they won't thrive. Our spiritual lives are much the same. Daily prayer provides the "water" our souls need to remain vibrant and strong.</p>
+      <blockquote>"Pray without ceasing." — 1 Thessalonians 5:17</blockquote>
+      <p>This book section dives into the itemized approach to prayer, helping you structure your sessions so that they remain fresh, focused, and powerful every single day.</p>
+    `,
+    image: 'https://images.unsplash.com/photo-1507502707541-f369a3b18502?auto=format&fit=crop&q=80&w=800',
+  },
+  {
+    id: '2',
+    title: 'Understanding Spiritual Warfare',
+    slug: 'understanding-spiritual-warfare',
+    author: 'A.S.K. Author',
+    date: 'March 28, 2026',
+    category: 'Warfare Insights',
+    excerpt: 'Spiritual warfare is a reality for every believer. Learn how to wield the authority given to you in Christ.',
+    content: `
+      <h2>Equipped for Battle</h2>
+      <p>The Bible tells us that our struggle is not against flesh and blood, but against spiritual forces of evil. Understanding this is the first step toward victory.</p>
+      <h3>Wielding Your Authority</h3>
+      <p>In the name of Jesus Christ, every believer has been given authority to overcome the power of the enemy. This isn't something we earn; it's something we inherit as children of God.</p>
+      <p>As we discuss in the "Witchcraft" prayer template, recognizing the schemes of the enemy allows us to pray with precision and power. This section of the book explores the biblical basis for our authority and how to exercise it effectively.</p>
+    `,
+    image: 'https://images.unsplash.com/photo-1461397821064-32d6b3c91b9f?auto=format&fit=crop&q=80&w=800',
   }
 ];
