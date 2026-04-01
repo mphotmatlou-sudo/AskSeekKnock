@@ -1,0 +1,115 @@
+## 1. Customizable Prayer Session Templates
+
+*   **Goal:** Allow users to create and customize prayer sessions.
+*   **Existing Code:** The app already has a `/personal-templates` page.
+*   **Action:**
+    *   Enhance the `/personal-templates` page to allow users to create new templates from scratch or modify existing ones.
+    *   Create a new component for a template editor that will allow users to add, edit, and reorder prayer points.
+    *   Use the existing UI components from `shadcn/ui` to build the editor.
+
+## 2. Adjustable Timer
+
+*   **Goal:** Add a timer to the prayer session to guide users through their prayer points.
+*   **Existing Code:** There is a `timer.tsx` component, but it's not integrated into the prayer session page.
+*   **Action:**
+    *   Integrate the `timer.tsx` component into the `/prayer-session` page.
+    *   Add controls to the timer to allow users to start, stop, and adjust the time for each prayer point.
+    *   Add a feature to automatically transition to the next prayer point when the timer for the current one ends.
+
+## 3. Date-Based Journaling
+
+*   **Goal:** Allow users to log their reflections and track their spiritual growth.
+*   **Existing Code:** The app has a `/prayer-journal` page.
+*   **Action:**
+    *   Enhance the `/prayer-journal` page to include a rich text editor for writing journal entries.
+    *   Add a calendar view to the page to allow users to easily navigate between journal entries by date.
+    *   Store the journal entries locally.
+
+## 4. Social Media Integration
+
+*   **Goal:** Allow users to share elements of the app on social media.
+*   **Existing Code:** There is a `share-buttons.tsx` component.
+*   **Action:**
+    *   Integrate the `share-buttons.tsx` component into the `/prayer-session` and `/personal-templates` pages.
+    *   Add functionality to share a summary of a prayer session or a personal template to social media platforms.
+
+## 5. Bible Verse Integration
+
+*   **Goal:** Allow users to search for and integrate Bible verses into their prayer templates.
+*   **Existing Code:** The app has a `/bible-verses` page.
+*   **Action:**
+    *   Integrate a Bible API (like BibleGateway or a similar free API) into the `/bible-verses` page.
+    *   Add a search bar to the page to allow users to search for Bible verses by keyword or reference.
+    *   Add a feature to allow users to select a verse and add it to their personal prayer templates.
+
+## 6. Crowdsourcing New Templates
+
+*   **Goal:** Allow users to suggest new templates.
+*   **Existing Code:** The app has a `/suggest-template` page.
+*   **Action:**
+    *   Enhance the `/suggest-template` page to include a form for submitting new template ideas.
+    *   Store the suggestions locally.
+
+## 7. Payment Gateway
+
+*   **Goal:** Implement a subscription system with three tiers.
+*   **Existing Code:** The app has a `/subscription` page.
+*   **Action:**
+    *   Integrate a payment gateway (like Stripe or Lemon Squeezy) into the `/subscription` page.
+    *   Create three subscription tiers with different features and pricing.
+    *   Manage user subscriptions locally.
+
+## 8. Landing Page and User Onboarding
+
+*   **Goal:** Create a landing page with subscription details and a user registration form.
+*   **Existing Code:** The app has `/login` and `/signup` pages.
+*   **Action:**
+    *   Create a new landing page that will serve as the entry point for new users.
+    *   Enhance the `/signup` page to include fields for collecting user information like country, city, age, gender, language, denomination, and preferred Bible translation.
+    *   Add email verification to the signup process to prevent the use of throw-away email addresses.
+
+## 9. Fasting Scheduler
+
+*   **Goal:** Allow users to schedule and track their fasting days.
+*   **Existing Code:** The app has a `/prayer-schedule` page.
+*   **Action:**
+    *   Enhance the `/prayer-schedule` page to include a fasting scheduler.
+    *   Add a feature to mark fasting days with a different color on the calendar.
+    *   Integrate the fasting scheduler with the prayer schedule to show fasting days alongside prayer sessions.
+
+## 10. Consolidate "Prayer Session" and "Prayer Schedule"
+
+*   **Goal:** Improve UX by combining the prayer session and schedule tabs.
+*   **Action:**
+    *   Merge the functionality of the `/prayer-session` and `/prayer-schedule` pages into a single, unified interface.
+    *   The new page will allow users to both schedule and start prayer sessions from the same place.
+
+## 11. Migrate "Create Templates"
+
+*   **Goal:** Improve UX by moving the "Create Templates" functionality.
+*   **Action:**
+    *   Move the functionality of the `/suggest-template` page to the `/personal-templates` page, making it a sub-tab or a button.
+    *   The "Bible Verse Locator" will be a key feature within the template creation process.
+
+## 12. Community and Template Sharing
+
+*   **Goal:** Create an in-app community for sharing and collaborating on prayer templates.
+*   **Existing Code:** The app has a `/community-templates` page.
+*   **Action:**
+    *   Enhance the `/community-templates` page to allow users to share their personal templates with the community.
+    *   Add user profiles to the community page to show who created each template.
+    *   Implement a system for tracking who has accessed and edited shared templates, including a permission system for enabling and disabling editing.
+
+## 13. Themes
+
+*   **Goal:** Add different color schemes.
+*   **Existing Code:** The app uses `next-themes`.
+*   **Action:**
+    *   Add two more themes to the existing light and dark themes.
+    *   Create a theme switcher to allow users to choose their preferred theme.
+
+## 14. Security
+
+*   **Goal:** Prevent screenshots and screen recording.
+*   **Action:**
+    *   Research and implement a solution to prevent screenshots and screen recording. This might involve using a third-party library or implementing a custom solution. I will inform the user about the feasibility and potential limitations of this feature.

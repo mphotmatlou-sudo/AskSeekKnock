@@ -1,0 +1,159 @@
+'use client';
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { 
+  LayoutDashboard, 
+  Clock, 
+  BookMarked, 
+  Calendar, 
+  PenSquare, 
+  UserSquare, 
+  ArrowRight,
+  TrendingUp,
+  Heart
+} from 'lucide-react';
+import Link from 'next/link';
+
+export default function DashboardPage() {
+  return (
+    <div className="flex-1 space-y-8 p-4 md:p-8 pt-6 bg-background/50">
+      <div className="flex items-center justify-between space-y-2">
+        <div>
+          <h2 className="text-4xl font-bold tracking-tight text-blocksy-heading animate-fade-in">
+            Welcome back, User
+          </h2>
+          <p className="text-muted-foreground mt-1 animate-fade-in delay-100">
+            Here's what's happening in your spiritual journey today.
+          </p>
+        </div>
+        <div className="flex items-center space-x-2">
+           <Link href="/prayer">
+            <Button className="shadow-blocksy hover:shadow-blocksy-lg transition-all duration-blocksy">
+              <Clock className="mr-2 h-4 w-4" /> Start Prayer
+            </Button>
+          </Link>
+        </div>
+      </div>
+
+      {/* Quick Stats Grid */}
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 animate-scale-in">
+        <Card className="border-none shadow-blocksy hover:shadow-blocksy-lg transition-all duration-blocksy group">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Prayer Sessions</CardTitle>
+            <div className="p-2 bg-primary/10 rounded-blocksy-md group-hover:bg-primary/20 transition-colors">
+              <Clock className="h-4 w-4 text-primary" />
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">12</div>
+            <p className="text-xs text-muted-foreground">
+              +2 from last week
+            </p>
+          </CardContent>
+        </Card>
+        <Card className="border-none shadow-blocksy hover:shadow-blocksy-lg transition-all duration-blocksy group">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Fasting Days</CardTitle>
+            <div className="p-2 bg-orange-500/10 rounded-blocksy-md group-hover:bg-orange-500/20 transition-colors">
+              <Calendar className="h-4 w-4 text-orange-500" />
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">3</div>
+            <p className="text-xs text-muted-foreground">
+              Next: Friday, April 3rd
+            </p>
+          </CardContent>
+        </Card>
+        <Card className="border-none shadow-blocksy hover:shadow-blocksy-lg transition-all duration-blocksy group">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Personal Templates</CardTitle>
+            <div className="p-2 bg-emerald-500/10 rounded-blocksy-md group-hover:bg-emerald-500/20 transition-colors">
+              <UserSquare className="h-4 w-4 text-emerald-500" />
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">5</div>
+            <p className="text-xs text-muted-foreground">
+              Active prayer structures
+            </p>
+          </CardContent>
+        </Card>
+        <Card className="border-none shadow-blocksy hover:shadow-blocksy-lg transition-all duration-blocksy group">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Reflections</CardTitle>
+            <div className="p-2 bg-purple-500/10 rounded-blocksy-md group-hover:bg-purple-500/20 transition-colors">
+              <TrendingUp className="h-4 w-4 text-purple-500" />
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">24</div>
+            <p className="text-xs text-muted-foreground">
+              Journal entries logged
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-7">
+        {/* Main Content Area - 4 cols */}
+        <Card className="col-span-4 border-none shadow-blocksy bg-white/50 backdrop-blur-sm animate-fade-in delay-200">
+          <CardHeader>
+            <CardTitle>Recent Prayer Activity</CardTitle>
+            <CardDescription>
+              Your spiritual consistency over the last 30 days.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="h-[300px] flex items-center justify-center text-muted-foreground border-2 border-dashed border-border/50 m-6 rounded-blocksy-lg">
+             <div className="text-center">
+                <LayoutDashboard className="h-12 w-12 mx-auto opacity-20 mb-2" />
+                <p>Activity visualization will appear here</p>
+             </div>
+          </CardContent>
+        </Card>
+
+        {/* Sidebar Cards - 3 cols */}
+        <div className="col-span-3 space-y-6">
+          <Card className="border-none shadow-blocksy animate-fade-in delay-300">
+            <CardHeader className="pb-3">
+              <CardTitle className="text-lg">Daily Verse</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <blockquote className="italic text-foreground/80 border-l-4 border-primary pl-4 py-2">
+                "Be anxious for nothing, but in everything by prayer and supplication, with thanksgiving, let your requests be made known to God."
+                <footer className="text-sm font-semibold mt-2 text-primary">— Philippians 4:6</footer>
+              </blockquote>
+              <Link href="/bible-verses" className="mt-4 block">
+                <Button variant="ghost" size="sm" className="w-full justify-between hover:bg-primary/5 group">
+                  <span>Explore more verses</span>
+                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
+
+          <Card className="border-none shadow-blocksy animate-fade-in delay-400 overflow-hidden">
+             <div className="h-2 bg-primary w-full" />
+            <CardHeader className="pb-3">
+              <CardTitle className="text-lg flex items-center">
+                <Heart className="mr-2 h-4 w-4 text-destructive fill-destructive" />
+                Community Spotlight
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground mb-4">
+                "Prayers for Restoration" template by Pastor John is trending in the community.
+              </p>
+              <Link href="/community">
+                <Button variant="outline" size="sm" className="w-full border-primary/20 hover:bg-primary/5">
+                  View Template
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+}

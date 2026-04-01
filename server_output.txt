@@ -1,0 +1,124 @@
+
+> nextn@0.1.0 dev
+> next dev --turbopack -p 9003
+
+   ▲ Next.js 15.3.3 (Turbopack)
+   - Local:        http://localhost:9003
+   - Network:      http://192.168.18.7:9003
+
+ ✓ Starting...
+Slow filesystem detected. If C:\Users\hp\Downloads\Projects - Client\A.S.K-main\A.S.K-main\.next is a network drive, consider moving it to a local folder. If you have an antivirus enabled, consider excluding your project directory.
+ ✓ Ready in 7s
+ ○ Compiling / ...
+ ✓ Compiled / in 6.6s
+(node:11212) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ⨯ [TypeError: localStorage.getItem is not a function] {
+  digest: '3664014023'
+}
+[TypeError: localStorage.getItem is not a function]
+ ⨯ [TypeError: localStorage.getItem is not a function] { page: '/' }
+ ○ Compiling /_error ...
+ ⨯ [TypeError: localStorage.getItem is not a function] {
+  digest: '3664014023'
+}
+[TypeError: localStorage.getItem is not a function]
+ ⨯ [TypeError: localStorage.getItem is not a function] { page: '/' }
+ ✓ Compiled /_error in 3.2s
+TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ unhandledRejection: TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ unhandledRejection:  TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ unhandledRejection: TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ unhandledRejection:  TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+[TypeError: localStorage.getItem is not a function] { page: '/' }
+TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ unhandledRejection: TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ unhandledRejection:  TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+[TypeError: localStorage.getItem is not a function] { page: '/' }
+TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ unhandledRejection: TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ unhandledRejection:  TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ GET / 500 in 13918ms
+ GET / 500 in 393ms
+ GET / 500 in 3111ms
+ GET / 500 in 150ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 1250ms
+ GET /favicon.ico 200 in 1745ms
+ ✓ Compiled in 120ms
+ ✓ Compiled / in 74ms
+ ⨯ [TypeError: localStorage.getItem is not a function] {
+  digest: '3664014023'
+}
+[TypeError: localStorage.getItem is not a function]
+ ⨯ [TypeError: localStorage.getItem is not a function] { page: '/' }
+TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ unhandledRejection: TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ unhandledRejection:  TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+[TypeError: localStorage.getItem is not a function] { page: '/' }
+TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ unhandledRejection: TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ ⨯ unhandledRejection:  TypeError: localStorage.getItem is not a function
+    at new Promise (<anonymous>)
+ GET / 500 in 1985ms
+ GET / 500 in 92ms

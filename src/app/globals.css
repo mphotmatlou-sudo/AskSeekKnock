@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Blocksy Palette Mapping to Shadcn UI */
+    --background: 210 20% 98%; /* Blocksy color 7: #FAFBFC */
+    --foreground: 212 28% 25%; /* Blocksy color 3: #3A4F66 */
+    
+    --card: 0 0% 100%; /* Blocksy color 8: #ffffff */
+    --card-foreground: 212 28% 25%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 212 28% 25%;
+    
+    --primary: 219 95% 57%; /* Blocksy color 1: #2872fa */
+    --primary-foreground: 210 20% 98%;
+    
+    --secondary: 210 17% 95%; /* Blocksy color 6: #f2f5f7 */
+    --secondary-foreground: 212 42% 17%; /* Blocksy color 4: #192a3d */
+    
+    --muted: 210 17% 95%;
+    --muted-foreground: 212 28% 35%;
+    
+    --accent: 210 17% 95%;
+    --accent-foreground: 219 95% 57%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    
+    --border: 204 20% 91%; /* Blocksy color 5: #e1e8ed */
+    --input: 204 20% 91%;
+    --ring: 219 95% 57%;
+    
+    --radius: 0.5rem;
+    
+    /* Blocksy Specific Variables */
+    --theme-palette-color-1: #2872fa;
+    --theme-palette-color-2: #1559ed;
+    --theme-palette-color-3: #3A4F66;
+    --theme-palette-color-4: #192a3d;
+    --theme-palette-color-5: #e1e8ed;
+    --theme-palette-color-6: #f2f5f7;
+    --theme-palette-color-7: #FAFBFC;
+    --theme-palette-color-8: #ffffff;
+    
+    --theme-text-color: var(--theme-palette-color-3);
+    --theme-heading-color: var(--theme-palette-color-4);
+    --theme-link-initial-color: var(--theme-palette-color-1);
+    --theme-link-hover-color: var(--theme-palette-color-2);
+    --theme-border-color: var(--theme-palette-color-5);
+    
+    --theme-container-width: 1290px;
+    --theme-content-max-width: 1290px;
+
+    /* Sidebar - Matching Blocksy sidebar */
+    --sidebar-background: 210 17% 95%;
+    --sidebar-foreground: 212 28% 35%;
+    --sidebar-primary: 219 95% 57%;
+    --sidebar-primary-foreground: 210 20% 98%;
+    --sidebar-accent: 204 20% 91%;
+    --sidebar-accent-foreground: 219 95% 57%;
+    --sidebar-border: 204 20% 91%;
+    --sidebar-ring: 219 95% 57%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 214 32% 91%;
+    --card: 222 47% 11%;
+    --card-foreground: 214 32% 91%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 214 32% 91%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+    
+    /* Dark Theme Blocksy Colors */
+    --theme-palette-color-1: #3a82ff;
+    --theme-palette-color-2: #5c9aff;
+    --theme-palette-color-3: #d1d5db;
+    --theme-palette-color-4: #f3f4f6;
+    --theme-palette-color-5: #374151;
+    --theme-palette-color-6: #1f2937;
+    --theme-palette-color-7: #111827;
+    --theme-palette-color-8: #030712;
+
+    --sidebar-background: 222 47% 9%;
+    --sidebar-foreground: 214 32% 91%;
+    --sidebar-primary: 217.2 91.2% 59.8%;
+    --sidebar-primary-foreground: 222.2 47.4% 11.2%;
+    --sidebar-accent: 217.2 32.6% 17.5%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217.2 32.6% 17.5%;
+    --sidebar-ring: 224.3 76.3% 48%;
+  }
+
+  /* Keeping existing themes for compatibility but aligning with Blocksy structure */
+  .theme-rose {
+    --primary: 350 80% 50%;
+    --ring: 350 80% 50%;
+    --accent-foreground: 350 80% 50%;
+  }
+
+  .theme-emerald {
+    --primary: 140 80% 30%;
+    --ring: 140 80% 30%;
+    --accent-foreground: 140 80% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    line-height: 1.65;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-blocksy-heading;
+    line-height: 1.5;
+  }
+  
+  a {
+    @apply transition-colors duration-blocksy ease-blocksy text-blocksy-link hover:text-blocksy-link-hover;
+  }
+}
+
